@@ -36,9 +36,10 @@ chown -R ${username}:tokopedia $logdir
 chown -h ${username}:tokopedia $homedir/*
 echo "Done"
 echo -n "* (6/6) Updating profile ... "
-echo "export NODE_ENV=development" >> /home/$username/.bashrc
-echo "export GOPATH=${devdir}/go" >> /home/$username/.bashrc
-echo "export PATH=\$PATH:\$GOPATH/bin" >> /home/$username/.bashrc
+echo "export NODE_ENV=development" >> $homedir/.bashrc
+echo "export GOPATH=${devdir}/go" >> $homedir/.bashrc
+echo "export PATH=\$PATH:\$GOPATH/bin" >> $homedir/.bashrc
+echo "unset SSH_ASKPASS" >> $homedir/.bashrc
 echo "Done"
 echo ""
 
