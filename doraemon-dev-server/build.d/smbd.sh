@@ -1,10 +1,11 @@
 #!/bin/bash
 
 echo ""
+logfile=/tmp/log/build-server.log
 echo "Installing Samba"
 echo "----------------"
 echo -n "* (1/5) Installing samba ... "
-yum install samba samba-client samba-common 1> /dev/null
+yum install samba samba-client samba-common 1>> $logfile
 echo "Done"
 echo -n "* (2/5) Checking version ... "
 smbd --version

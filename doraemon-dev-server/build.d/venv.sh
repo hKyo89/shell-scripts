@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo ""
+logfile=/tmp/log/build-server.log
 echo "Setting Up Working Environment"
 echo "------------------------------"
 devdir=/data/projects/development

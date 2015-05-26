@@ -1,10 +1,11 @@
 #!/bin/bash
 
 echo ""
+logfile=/tmp/log/build-server.log
 echo "Installing Go"
 echo "-------------"
 echo "* (1/5) Downloading go"
-cd /tmp && git clone https://go.googlesource.com/go 1> /dev/null
+cd /tmp && git clone https://go.googlesource.com/go 1>> $logfile
 echo "* (2/5) Changing go version to 1.4.2"
 mv /tmp/go /usr/bin/
 cd /usr/bin/go

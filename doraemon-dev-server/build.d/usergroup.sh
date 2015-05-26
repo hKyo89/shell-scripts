@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo ""
+logfile=/tmp/log/build-server.log
 echo "Setting Up Usergroup"
 echo "--------------------"
 echo -n "* (1/1) Adding tokopedia group ... "

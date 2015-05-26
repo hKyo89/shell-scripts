@@ -17,6 +17,8 @@ FILES=(
 )
 
 echo ""
+mkdir -p /tmp/log
+touch /tmp/log/build-server.log
 
 for file in ${FILES[@]}; do
 	$FILEDIR/${file}

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo ""
+logfile=/tmp/log/build-server.log
 echo "Adding User"
 echo "-----------"
 

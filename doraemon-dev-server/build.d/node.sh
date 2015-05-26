@@ -1,13 +1,14 @@
 #!/bin/bash
 
 echo ""
+logfile=/tmp/log/build-server.log
 echo "Installing Node.js"
 echo "------------------"
 echo -n "* (1/6) Downloading node.js ... "
-wget -P /tmp/ "http://nodejs.org/dist/v0.12.4/node-v0.12.4-linux-x64.tar.gz" 1> /dev/null
+wget -P /tmp/ "http://nodejs.org/dist/v0.12.4/node-v0.12.4-linux-x64.tar.gz" 1>> $logfile
 echo "Done"
 echo -n "* (2/6) Extracting package ... "
-tar xzvf node-v* 1> /dev/null
+tar xzvf node-v* 1>> $logfile
 echo "Done"
 echo -n "* (3/6) Installing node.js ... "
 mv /tmp/node-v* /usr/bin/node

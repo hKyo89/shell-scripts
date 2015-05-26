@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo ""
+logfile=/tmp/log/build-server.log
 echo "Setting Up Profile"
 echo "------------------"
 echo -n "* (1/1) Set locale as en_US ... "

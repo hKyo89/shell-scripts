@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo ""
+logfile=/tmp/log/build-server.log
 echo "Deleting User"
 echo "-------------"
 echo "* (1/3) Deleting user"
