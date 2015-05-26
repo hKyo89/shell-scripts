@@ -10,6 +10,7 @@ FILES=(
 	git.sh
 	nginx.sh
 	node.sh
+	psql.sh
 	smbd.sh
 	adduser.sh
 )
