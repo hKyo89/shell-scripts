@@ -27,13 +27,14 @@ ln -s $devdir/node $homedir/node
 ln -s $logdir $homedir/log
 echo "Done"
 echo -n "* (5/6) Changing ownership and permission ... "
-chown $username:tokopedia $devdir
-chown $username:tokopedia $logdir
-chown -h $username:tokopedia $homedir/venv
-chown -h $username:tokopedia $homedir/go
-chown -h $username:tokopedia $homedir/node
-chown -h $username:tokopedia $homedir/log
 mkdir -p $homedir/tmp
+chown ${username}:tokopedia $homedir/tmp
+chown ${username}:tokopedia $devdir
+chown ${username}:tokopedia $logdir
+chown -h ${username}:tokopedia $homedir/venv
+chown -h ${username}:tokopedia $homedir/go
+chown -h ${username}:tokopedia $homedir/node
+chown -h ${username}:tokopedia $homedir/log
 echo "Done"
 echo -n "* (6/6) Updating profile ... "
 echo "export NODE_ENV=development" >> /home/$username/.bashrc
