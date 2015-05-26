@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo ""
-echo "Installing Basic Tools"
+echo "Installing Core Tools"
 echo "----------------------------"
 echo -n "* (1/4) Installing 'Development Tools' ... "
-yum groupinstall -y 'Development Tools' 1> /dev/null
+yum groupinstall -y --skip-broken 'Development Tools' 1> /dev/null
 echo "Done"
 echo -n "* (2/4) Installing wget ... "
 yum install -y wget 1> /dev/null
