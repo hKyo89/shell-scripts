@@ -30,13 +30,10 @@ ln -s $logdir $homedir/log
 echo "Done"
 echo -n "* (5/6) Changing ownership and permission ... "
 mkdir -p $homedir/tmp
-chown ${username}:tokopedia $homedir/tmp
-chown ${username}:tokopedia $devdir
-chown ${username}:tokopedia $logdir
-chown -h ${username}:tokopedia $homedir/venv
-chown -h ${username}:tokopedia $homedir/go
-chown -h ${username}:tokopedia $homedir/node
-chown -h ${username}:tokopedia $homedir/log
+chown -R ${username}:tokopedia $homedir/tmp
+chown -R ${username}:tokopedia $devdir
+chown -R ${username}:tokopedia $logdir
+chown -h ${username}:tokopedia $homedir/*
 echo "Done"
 echo -n "* (6/6) Updating profile ... "
 echo "export NODE_ENV=development" >> /home/$username/.bashrc
