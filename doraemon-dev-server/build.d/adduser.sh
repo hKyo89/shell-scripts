@@ -31,7 +31,7 @@ echo "Done"
 echo -n "* (6/6) Updating profile ... "
 echo "export NODE_ENV=development" >> /home/$username/.bashrc
 echo "export GOPATH=${devdir}/go" >> /home/$username/.bashrc
-echo "export PATH=$PATH:$GOPATH/bin" >> /home/$username/.bashrc
+echo "export PATH=\$PATH:\$GOPATH/bin" >> /home/$username/.bashrc
 echo "Done"
 echo ""
 

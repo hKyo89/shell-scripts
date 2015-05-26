@@ -13,6 +13,6 @@ echo "* (3/4) Installing go"
 cd src
 ./all.bash
 echo -n "* (4/4) Update profile ... "
-echo "export PATH=$PATH:/usr/bin/go/bin" >> /etc/profile.d/go.sh
+echo "export PATH=\$PATH:/usr/bin/go/bin" >> /etc/profile.d/go.sh
 echo "Done"
 echo ""
