@@ -1,0 +1,24 @@
+#!/bin/bash
+
+BASEDIR=$(dirname $0)
+FILEDIR=$BASEDIR/build.d
+FILES=(
+	profile.sh
+	basictools.sh
+	usergroup.sh
+	venv.sh
+	git.sh
+	nginx.sh
+	node.sh
+	adduser.sh
+)
+
+echo ""
+
+for file in ${FILES[@]}; do
+	$FILEDIR/${file}
+done
+
+echo ""
+echo "Installation complete!"
+echo ""
