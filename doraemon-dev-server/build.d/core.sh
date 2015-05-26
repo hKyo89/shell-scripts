@@ -15,4 +15,5 @@ echo "Done"
 echo -n "* (4/4) Installing Ack ... "
 yum install -y ack 1> /dev/null
 echo "Done"
+unset SSH_ASKPASS
 echo ""
