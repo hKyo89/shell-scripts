@@ -6,8 +6,10 @@ echo "-----------"
 echo "* (1/6) Creating user"
 echo -n "  > Username: "
 read username
-adduser -g tokopedia $username --password=$username123
-echo "  > User $username was added with password as ${username}123"
+password=${username}123*
+adduser -g tokopedia $username
+echo "$username:$password" | chpasswd
+echo "  > User $username was added with password as $password"
 
 devdir=/data/projects/development/$username
 logdir=/data/logs/$username
