@@ -4,7 +4,7 @@ BASEDIR=$(dirname $0)
 FILEDIR=$BASEDIR/build.d
 FILES=(
 	profile.sh
-	basictools.sh
+	core.sh
 	usergroup.sh
 	venv.sh
 	git.sh
