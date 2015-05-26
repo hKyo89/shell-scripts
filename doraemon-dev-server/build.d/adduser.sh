@@ -16,6 +16,9 @@ logdir=/data/logs/$username
 homedir=/home/$username
 echo -n "* (2/6) Creating $devdir ... "
 mkdir -p $devdir/go
+mkdir -p $devdir/go/bin
+mkdir -p $devdir/go/pkg
+mkdir -p $devdir/go/src
 mkdir -p $devdir/node
 echo "Done"
 echo -n "* (3/6) Creating $logdir ... "
