@@ -20,10 +20,9 @@ echo -n "* (5/8) Starting chkconfig ... "
 chkconfig postgresql-9.4 on 1>> $logfile
 echo "Done"
 echo -n "* (6/8) Updating config to listen * ... "
-cp /var/lib/pgsql/9.4/data/postgresql.conf /var/lib/pgsql/9.4/data/postgresql.conf.bak
-echo "" >> /var/lib/pgsql/9.4/data/postgresql.conf
-echo "# Connection" >> /var/lib/pgsql/9.4/data/postgresql.conf
-echo "listen_addresses = \"*\"" >> /var/lib/pgsql/9.4/data/postgresql.conf
+conffile=/var/lib/pgsql/9.4/data/postgresql.conf
+cp $conffile ${conffile}.bak
+sed -ri "s/(#)(listen_addresses[ ]*=[ ]*)\"localhost\"/\2\"*\"/g" $conffile
 echo "Done"
 echo -n "* (7/8) Updating host to listen * ... "
 cp /var/lib/pgsql/9.4/data/pg_hba.conf /var/lib/pgsql/9.4/data/pg_hba.conf.bak
