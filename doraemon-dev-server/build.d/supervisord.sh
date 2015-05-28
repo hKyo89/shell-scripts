@@ -83,6 +83,8 @@ echo -n "* (6/) Installing superlance ... "
 easy_install superlance 1>> $logfile
 echo "Done"
 
+setenforce 0
+
 echo ""
 
 

@@ -39,4 +39,7 @@ echo "# su - postgres"
 echo "# psql"
 echo "psql> CREATE USER user_name WITH ENCRYPTED PASSWORD 'user_password';"
 echo "psql> CREATE DATABASE db_name OWNER user_name;"
+
+setenforce 0
+
 echo ""
